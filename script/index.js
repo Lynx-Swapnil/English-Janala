@@ -1,3 +1,19 @@
+const createElement = (arr) => {
+    const htmlElement = arr.map(el => `<span class="btn">${el}</span>`)
+    return(htmlElement.join(' '));
+}
+
+const manageSpinner = (status) => {
+  if(status === true){
+    document.getElementById("spinner").classList.remove("hidden");
+    document.getElementById("word-container").classList.add("hidden");
+}
+else{
+    document.getElementById("spinner").classList.add("hidden");
+    document.getElementById("word-container").classList.remove("hidden");
+}
+}
+    
 const loadLessons = () => {
   fetch("https://openapi.programming-hero.com/api/levels/all")
     .then((res) => res.json())
@@ -10,6 +26,7 @@ const removeActiveClassFromButtons = () => {
 };
 
 const loadLevelWords = (level_no) => {
+  manageSpinner(true);
   url = `https://openapi.programming-hero.com/api/level/${level_no}`;
   fetch(url)
     .then((res) => res.json())
@@ -27,20 +44,6 @@ const loadWordDetails = async (word_id) => {
         displayWordDetails(details.data);
 };
 
-// "word": "Eager",
-// "meaning": "আগ্রহী",
-// "pronunciation": "ইগার",
-// "level": 1,
-// "sentence": "The kids were eager to open their gifts.",
-// "points": 1,
-// "partsOfSpeech": "adjective",
-// "synonyms": [
-// "enthusiastic",
-// "excited",
-// "keen"
-// ],
-// "id": 5
-
 const displayWordDetails = (details) => {
     const detailsBox = document.getElementById("details-container");
     detailsBox.innerHTML = `
@@ -57,9 +60,9 @@ const displayWordDetails = (details) => {
       </div>
       <div class="">
         <h2 class ="font-bold">সমার্থক শব্দ গুলো</h2>
-        <span class="btn">${details.synonyms[0]}</span>
-        <span class="btn">${details.synonyms[1]}</span>
-        <span class="btn">${details.synonyms[2]}</span>
+        <div class="">
+        </div>
+        ${createElement(details.synonyms)}
       </div>
     `;
     document.getElementById("word_modal").showModal();
@@ -74,6 +77,7 @@ const displayLevelWords = (words) => {
         <p class="text-xl font-medium text-gray-400">এই Lesson এ এখনো কোন Vocabulary যুক্ত করা হয়নি।</p>
         <h2 class="font-bold text-4xl">নেক্সট Lesson এ যান</h2>
      </div>`;
+     manageSpinner(false);
     return;
   }
 
@@ -92,6 +96,7 @@ const displayLevelWords = (words) => {
         `;
     wordContainer.appendChild(card);
   });
+  manageSpinner(false);
 };
 
 const displayLessons = (lessons) => {

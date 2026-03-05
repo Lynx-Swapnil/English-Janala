@@ -13,7 +13,7 @@
 
 English Janala is a comprehensive vocabulary learning platform designed for Bengali speakers. It provides an intuitive interface to learn English words through organized lessons, interactive cards, voice pronunciation, and personalized word collections.
 
-**Live Demo:** [Visit English Janala](#) *(Add your deployment link here)*
+**Live Demo:** [Visit English Janala](https://lynx-swapnil.github.io/English-Janala/)
 
 ---
 
@@ -226,9 +226,9 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## 👤 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+**Swapnil**
+- GitHub: [@lynx-swapnil](https://github.com/lynx-swapnil)
+- Portfolio: [English Janala](https://lynx-swapnil.github.io/English-Janala/)
 
 ---
 
@@ -263,6 +263,6 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ⭐ Star this repo if you find it helpful!
 
-[Report Bug](https://github.com/yourusername/english-janala/issues) · [Request Feature](https://github.com/yourusername/english-janala/issues)
+[Report Bug](https://github.com/lynx-swapnil/English-Janala/issues) · [Request Feature](https://github.com/lynx-swapnil/English-Janala/issues)
 
 </div>

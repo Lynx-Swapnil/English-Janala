@@ -1,116 +1,268 @@
-# ENGLISH <img width="25px" src="./assets/logo.png" /> JANALA
+# <img width="35px" src="./assets/logo.png" /> English Janala (ইংরেজি জানালা)
+
+**Your Window to Learning English** - An interactive web-based vocabulary learning platform that makes mastering English fun and engaging!
+
+[![Made with Love](https://img.shields.io/badge/Made%20with-❤️-red.svg)](https://github.com)
+[![HTML](https://img.shields.io/badge/HTML5-E34F26?logo=html5&logoColor=white)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+[![Tailwind CSS](https://img.shields.io/badge/Tailwind_CSS-38B2AC?logo=tailwind-css&logoColor=white)](https://tailwindcss.com/)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?logo=javascript&logoColor=black)](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
 
 ---
 
-## ⚡ API Endpoints
+## 🌟 Overview
 
-1. Get ⚡ All Levels
+English Janala is a comprehensive vocabulary learning platform designed for Bengali speakers. It provides an intuitive interface to learn English words through organized lessons, interactive cards, voice pronunciation, and personalized word collections.
 
-```bash
-https://openapi.programming-hero.com/api/levels/all
+**Live Demo:** [Visit English Janala](#) *(Add your deployment link here)*
+
+---
+
+## ✨ Key Features
+
+### 📚 **Structured Learning**
+- **Progressive Lessons**: Multiple difficulty levels organized in sequential lessons
+- **Dynamic Content Loading**: Words are fetched from a RESTful API
+- **Visual Feedback**: Active lesson highlighting for better navigation
+
+### 🎴 **Interactive Vocabulary Cards**
+- **Complete Information**: Each card displays the word, meaning, and pronunciation
+- **Detailed Modal View**: Click info icon for comprehensive details including:
+  - Example sentences
+  - Synonyms
+  - Proper pronunciation guide
+- **Responsive Design**: Perfectly adapts to mobile, tablet, and desktop screens
+
+### 💾 **Personal Word Collection**
+- **Save Favorites**: Add words to your personal collection with a heart icon
+- **LocalStorage Persistence**: Your saved words remain even after closing the browser
+- **Dedicated Section**: Beautiful pink-themed saved vocabulary display
+- **Easy Management**: Toggle to add/remove words instantly
+
+### 🔍 **Smart Search**
+- **Real-time Search**: Find words as you type (500ms debounce)
+- **Instant Results**: Search across all vocabulary words
+- **Responsive UI**: Automatically updates display based on search query
+
+### 🔊 **Voice Pronunciation**
+- **Text-to-Speech**: Hear correct pronunciation of any word
+- **Visual Feedback**: Button highlights when speaking
+- **Browser-based**: Uses Web Speech API (no external dependencies)
+
+### 🎨 **User Experience**
+- **Loading Indicators**: Beautiful spinner during data fetch
+- **Error Handling**: User-friendly messages in Bengali and English
+- **Smooth Animations**: Professional transitions and effects
+- **Bilingual Interface**: Bengali and English for better accessibility
+
+---
+
+## 🛠️ Technologies Used
+
+| Technology | Purpose |
+|-----------|---------|
+| **HTML5** | Semantic structure and accessibility |
+| **Tailwind CSS** | Utility-first styling framework |
+| **DaisyUI** | Pre-built UI components |
+| **JavaScript (ES6+)** | Dynamic functionality and API integration |
+| **Web Speech API** | Voice pronunciation feature |
+| **LocalStorage** | Client-side data persistence |
+| **Font Awesome** | Beautiful icons throughout the app |
+
+---
+
+## 🚀 Getting Started
+
+### Prerequisites
+- A modern web browser (Chrome, Firefox, Safari, Edge)
+- Internet connection (for API and CDN resources)
+
+### Installation
+
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/yourusername/english-janala.git
+   cd english-janala
+   ```
+
+2. **Open the project**
+   ```bash
+   # Simply open index.html in your browser
+   # Or use a local server (recommended)
+   ```
+
+3. **Using Live Server (VS Code)**
+   - Install "Live Server" extension
+   - Right-click on `index.html` → Open with Live Server
+
+4. **Using Python**
+   ```bash
+   # Python 3
+   python -m http.server 8000
+   ```
+
+5. **Using Node.js**
+   ```bash
+   npx serve
+   ```
+
+---
+
+## 📂 Project Structure
+
+```
+english-janala/
+│
+├── index.html              # Main HTML file
+├── README.md               # Project documentation
+├── tailwind.config.js      # Tailwind configuration
+│
+├── assets/                 # Images and static files
+│   ├── logo.png
+│   ├── hero-student.png
+│   └── alert-error.png
+│
+├── script/                 # JavaScript files
+│   └── index.js           # Main application logic
+│
+└── styles/                # CSS files
+    └── style.css          # Custom styles and animations
 ```
 
-1. Get ⚡ Words by Levels <br/>
-   https:// openapi.programming-hero.com/api/level/{id}
+---
 
-```bash
-https://openapi.programming-hero.com/api/level/5
-```
+## 🔌 API Endpoints
 
-1. Get ⚡ Words Detail <br/>
-   https:// openapi.programming-hero.com/api/word/{id}
+This project uses the Programming Hero Open API:
 
-```bash
-https://openapi.programming-hero.com/api/word/5
-```
-
-1. Get ⚡ All Words <br/>
-
-```bash
-https://openapi.programming-hero.com/api/words/all
-```
-
-# Work To do
-
-### 1. Show Levels on The UI
-
-- [ ] Show a center-aligned heading as Figma
+| Endpoint | Description | Example |
+|----------|-------------|---------|
+| **Get All Levels** | Fetch all available lesson levels | `https://openapi.programming-hero.com/api/levels/all` |
+| **Get Words by Level** | Get vocabulary words for a specific level | `https://openapi.programming-hero.com/api/level/5` |
+| **Get Word Details** | Get detailed information about a word | `https://openapi.programming-hero.com/api/word/5` |
+| **Get All Words** | Fetch complete vocabulary database | `https://openapi.programming-hero.com/api/words/all` |
 
 ---
 
-- [ ] Create dynamically generated buttons from **API-01** for each lesson
-- [ ] Lesson Buttons will be displayed on page load
+## 💡 How to Use
+
+1. **Select a Lesson**: Click on any lesson button (Lesson - 1, Lesson - 2, etc.)
+2. **Browse Words**: Scroll through vocabulary cards for that lesson
+3. **View Details**: Click the ℹ️ icon to see detailed information in a modal
+4. **Hear Pronunciation**: Click the 🔊 icon to hear the word pronounced
+5. **Save Favorites**: Click the ❤️ icon to add words to your collection
+6. **Search Words**: Type in the search box to find specific vocabulary
+7. **View Saved Words**: Scroll to "Saved Vocabulary" section to see your collection
 
 ---
 
-### 2. Show Word Cards Based on Level
+## 🎯 Features Breakdown
 
-- [ ] Show a default text that will be displayed in the Vocabulary section initially
-- [ ] on Clicking a Specific Lesson Button Load All the words from **API-02**
-- [ ] Display all words for a selected lesson in a card format, showing:
+### ✅ Implemented Features
 
-  - [ ] Word
-  - [ ] Word meaning & pronunciation
-  - [ ] Two buttons with relevant icons as per Figma
+- [x] Dynamic lesson buttons from API
+- [x] Interactive vocabulary cards
+- [x] Active lesson highlighting
+- [x] Detailed word information modal
+- [x] Voice pronunciation with visual feedback
+- [x] Real-time search functionality
+- [x] Save words to personal collection
+- [x] LocalStorage persistence
+- [x] Loading spinner animations
+- [x] Comprehensive error handling
+- [x] Fully responsive design
+- [x] Bilingual UI (Bengali/English)
+- [x] Smooth animations and transitions
 
-- [ ] Show **\*No Word Found** message if no words exist for a lesson
+---
+
+## 🎨 Design Features
+
+- **Color Scheme**: Primary blue with accent colors
+- **Typography**: Poppins (English) & Hind Siliguri (Bengali)
+- **Responsive Grid**: 1 column (mobile) → 2 columns (tablet) → 3 columns (desktop)
+- **Animations**: Smooth transitions, fade effects, and hover states
+- **Accessibility**: Semantic HTML, proper ARIA labels, and keyboard navigation
 
 ---
 
-- [ ] Create functionality to highlight the active lesson button
+## 🤝 Contributing
+
+Contributions are welcome! Here's how you can help:
+
+1. Fork the repository
+2. Create a feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
 ---
 
-### 3. Use Different Color on The Active Level Button
+## 📝 Future Enhancements
 
-- [ ] After Successfully Loading words of a level , diffirentiate the button so user can understand which button is active
-
-### 4. Vocabulary Details
-
-- [ ] Create functionality to open a modal when clicking the details icon
-- [ ] Data will be load from **API-03**
-- [ ] modal will displays:
-  - [ ] Word with pronunciation
-  - [ ] Example sentence
-  - [ ] Synonyms
-  - [ ] A "Complete Learning" button to close the modal
-
-### 5. Handling Invalid Data
-
-- [ ] avoid displaying falsy values like `undefined` or `null`
-- [ ] display relevant words if no data is found
-
-### 6. Loading Spinner
-
-- [ ] Create a loading spinner that will be display when vocabulary is loading from API
-
-### 7. Implement Search Functionality
-
-- [ ] Take a input Box.
-- [ ] on Changing value It will Search word and show in the UI.
-- [ ] If anyone Do search reset active button
-
-### 8. Save Word Feature
-
-- [ ] in the UI of Card add a button `Heart icon`
-- [ ] on Clicking it. Store the Word in the Saved Box
-- [ ] Show Saved words in a Different Section.
-
-### 9. Speak your Vocabularies
-
-- [ ] Create functionality for voice pronunciation of vocabulary words
-- [ ] Use below function and implement on clicking sound icon
-
-```js
-function pronounceWord(word) {
-  const utterance = new SpeechSynthesisUtterance(word);
-  utterance.lang = "en-EN"; // English
-  window.speechSynthesis.speak(utterance);
-}
-```
-
-For More >> you can explore this implementation 👉 [https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ](https://codepen.io/Ferdous-Zihad/pen/PwoJMmJ)
+- [ ] User authentication and cloud sync
+- [ ] Progress tracking and statistics
+- [ ] Quiz and practice modes
+- [ ] Word categories and tags
+- [ ] Dark mode toggle
+- [ ] Export saved words to PDF
+- [ ] Spaced repetition algorithm
+- [ ] Offline support with Service Workers
+- [ ] Multi-language support
 
 ---
-Bonus : How to create Private Repository for next assignments
-## Test Repo - :  https://classroom.github.com/a/Fgjib-lr
+
+## 🐛 Known Issues
+
+- Voice pronunciation requires browser support for Web Speech API
+- Some older browsers may not support all CSS features
+
+---
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+
+## 👤 Author
+
+**Your Name**
+- GitHub: [@yourusername](https://github.com/yourusername)
+- LinkedIn: [Your Profile](https://linkedin.com/in/yourprofile)
+
+---
+
+## 🙏 Acknowledgments
+
+- [Programming Hero](https://programming-hero.com) for the API
+- [DaisyUI](https://daisyui.com/) for beautiful UI components
+- [Font Awesome](https://fontawesome.com/) for amazing icons
+- [Tailwind CSS](https://tailwindcss.com/) for the utility framework
+
+---
+
+## 📸 Screenshots
+
+### Hero Section
+![Hero Section](./screenshots/hero.png)
+
+### Vocabulary Cards
+![Vocabulary Cards](./screenshots/cards.png)
+
+### Saved Words
+![Saved Words](./screenshots/saved.png)
+
+### Modal Details
+![Modal](./screenshots/modal.png)
+
+---
+
+<div align="center">
+
+**Made with ❤️ for English Learners**
+
+⭐ Star this repo if you find it helpful!
+
+[Report Bug](https://github.com/yourusername/english-janala/issues) · [Request Feature](https://github.com/yourusername/english-janala/issues)
+
+</div>

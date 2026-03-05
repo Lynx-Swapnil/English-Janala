@@ -8,3 +8,43 @@
   background-color: #422ad5;
   color: white;
 }
+
+/* Button hover effects */
+.btn {
+  transition: all 0.3s ease;
+}
+
+/* Heart animation */
+@keyframes heartBeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+}
+
+.fa-heart:hover {
+  animation: heartBeat 0.5s ease;
+}
+
+/* Loading animation enhancement */
+#spinner {
+  transition: opacity 0.3s ease;
+}
+
+/* Smooth modal appearance */
+dialog {
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}

@@ -229,8 +229,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 **Swapnil**
 - GitHub: [@lynx-swapnil](https://github.com/lynx-swapnil)
 - Portfolio: [lynx-swapnil.github.io/Portfolio](https://lynx-swapnil.github.io/Portfolio/)
-- Project: [English Janala](https://lynx-swapnil.github.io/English-Janala/)
-
+ 
 ---
 
 ## 🙏 Acknowledgments

@@ -148,7 +148,36 @@
     <section
       id="word-container"
       class="bg-gray-100 my-10 p-10 w-11/12 mx-auto grid grid-cols-3 gap-5"
-    ></section>
+    >
+      <div
+        class="text-center col-span-full rounded-xl py-10 space-y-6 font-bangla"
+      >
+        <p class="text-xl font-medium text-gray-400">
+          আপনি এখনো কোন Lesson Select করেন নি
+        </p>
+        <h2 class="font-bold text-4xl">একটি Lesson Select করুন।</h2>
+      </div>
+    </section>
+
+
+    <!-- Open the modal using ID.showModal() method -->
+<!-- <button class="btn" onclick="my_modal_5.showModal()">open modal</button> -->
+
+<dialog id="word_modal" class="modal modal-bottom sm:modal-middle">
+  <div class="modal-box">
+    <div id="details-container" class="space-y-5">
+     
+    </div>
+    <div class="modal-action">
+      <form method="dialog">
+        <!-- if there is a button in form, it will close the modal -->
+        <button class="btn btn-primary">Complete Learning</button>
+      </form>
+    </div>
+  </div>
+</dialog>
+
+
     <script src="script/index.js"></script>
   </body>
 </html>
